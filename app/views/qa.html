@@ -1,0 +1,18 @@
+<div class="row row-content">
+	<div class="col-sm-10 col-sm-offset-2">
+		<h1 style="color: lime;">Answers of the questions given by Manowar sir.</h1>
+	</div>
+	<div class="col-sm-12">
+		<div class="media" ng-repeat="ans in answer">
+			<div class="media-heading">
+				<h2 class="title">{{ans.index}}. <small ng-bind-html="ans.que"></small></h2>.
+			</div>
+			<div class="media-body">
+				<blockquote>
+					<div class="answers" ng-bind-html="ans.ans"></div>
+				</blockquote>		
+			</div>
+		</div>
+		
+	</div>
+</div>

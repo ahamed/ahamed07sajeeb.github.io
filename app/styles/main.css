@@ -1,0 +1,191 @@
+
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+
+/*.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .jumbotron {
+    border-bottom: 0;
+  }
+}*/
+
+#teachers h3,#students h3{
+  color: floralwhite;
+}
+#teachers h4,#students h4{
+  color: floralwhite;
+}
+#teachers h2,#students h2{
+  color: floralwhite;
+}
+
+body{
+  #background: lightgray;
+}
+
+#students{
+  border-left: 1px solid black;
+  border: 1px solid black;
+  height: 450px;
+  width: 400px;
+  text-align: right;
+  background: #7986CB;
+
+}
+
+#teachers{
+  border: 1px solid black;
+  height: 450px;
+  background: #7986CB;
+}
+
+p{
+  font-size: 20px;
+  text-align: justify;
+}
+pre{
+  
+  border: 0px;
+  font-size: 16px;
+
+}
+
+ul.navbar-nav >li{
+  width: 400px;
+}
+ul.navbar-nav > li > a{
+  text-align: center;
+}
+.footer{
+  background: gray;
+}
+
+ul.footer-ul > li > a{
+  color: lightgray;
+}
+
+ul.footer.ul h5{
+  color: white;
+}
+body{
+  #background: lightgray;
+}
+
+
+.answers, small{
+  text-align: justify;
+}
+
+#information{
+  height: 400px;
+  border: 1px solid green;
+  text-align: center;
+  background: black;
+  color: lime;
+}
+
+
+blockquote{
+  margin-left: 40px;
+  border-left: 4px solid lime;
+}
+/*blockquote {
+  margin-left: 40px;
+  background: #f9f9f9;
+  border-left: 10px solid lime;
+  margin-left: 5px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  #content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote div{
+  display: inline;
+}*/

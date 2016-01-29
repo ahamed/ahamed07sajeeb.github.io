@@ -1,0 +1,118 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'stream-combiner',
+1 verbose cli   '--save-dev' ]
+2 info using npm@1.4.29
+3 info using node@v0.10.41
+4 verbose node symlink /usr/bin/node
+5 warn deprecated This version of npm lacks support for important features,
+6 warn deprecated such as scoped packages, offered by the primary npm
+7 warn deprecated registry. Consider upgrading to at least npm@2, if not the
+8 warn deprecated latest stable version. To upgrade to npm@2, run:
+9 warn deprecated npm -g install npm@latest-2
+10 warn deprecated To upgrade to the latest stable version, run:
+11 warn deprecated npm -g install npm@latest
+12 warn deprecated (Depending on how Node.js was installed on your system, you
+13 warn deprecated may need to prefix the preceding commands with `sudo`, or if
+14 warn deprecated on Windows, run them from an Administrator prompt.)
+15 warn deprecated If you're running the version of npm bundled with
+16 warn deprecated Node.js 0.10 LTS, be aware that the next version of 0.10 LTS
+17 warn deprecated will be bundled with a version of npm@2, which has some small
+18 warn deprecated backwards-incompatible changes made to `npm run-script` and
+19 warn deprecated semver behavior.
+20 warn package.json gulp-minify-css@1.2.3 No repository field.
+21 verbose readDependencies using package.json deps
+22 verbose cache add [ 'stream-combiner', null ]
+23 verbose cache add name=undefined spec="stream-combiner" args=["stream-combiner",null]
+24 verbose parsed url { protocol: null,
+24 verbose parsed url   slashes: null,
+24 verbose parsed url   auth: null,
+24 verbose parsed url   host: null,
+24 verbose parsed url   port: null,
+24 verbose parsed url   hostname: null,
+24 verbose parsed url   hash: null,
+24 verbose parsed url   search: null,
+24 verbose parsed url   query: null,
+24 verbose parsed url   pathname: 'stream-combiner',
+24 verbose parsed url   path: 'stream-combiner',
+24 verbose parsed url   href: 'stream-combiner' }
+25 silly lockFile 2c1d4fe3-stream-combiner stream-combiner
+26 verbose lock stream-combiner /home/sajeeb/.npm/2c1d4fe3-stream-combiner.lock
+27 silly lockFile 2c1d4fe3-stream-combiner stream-combiner
+28 silly lockFile 2c1d4fe3-stream-combiner stream-combiner
+29 verbose addNamed [ 'stream-combiner', '' ]
+30 verbose addNamed [ null, '*' ]
+31 silly lockFile b36c76fd-stream-combiner stream-combiner@
+32 verbose lock stream-combiner@ /home/sajeeb/.npm/b36c76fd-stream-combiner.lock
+33 silly addNameRange { name: 'stream-combiner', range: '*', hasData: false }
+34 verbose request where is /stream-combiner
+35 verbose request registry https://registry.npmjs.org/
+36 verbose request id 29bafe64f0525125
+37 verbose url raw /stream-combiner
+38 verbose url resolving [ 'https://registry.npmjs.org/', './stream-combiner' ]
+39 verbose url resolved https://registry.npmjs.org/stream-combiner
+40 verbose request where is https://registry.npmjs.org/stream-combiner
+41 info trying registry request attempt 1 at 01:06:11
+42 verbose etag "9JFSU463QOUXE8PS7NIKW88DT"
+43 http GET https://registry.npmjs.org/stream-combiner
+44 http 304 https://registry.npmjs.org/stream-combiner
+45 silly registry.get cb [ 304,
+45 silly registry.get   { date: 'Thu, 21 Jan 2016 19:06:13 GMT',
+45 silly registry.get     via: '1.1 varnish',
+45 silly registry.get     'cache-control': 'max-age=300',
+45 silly registry.get     etag: '"9JFSU463QOUXE8PS7NIKW88DT"',
+45 silly registry.get     age: '122',
+45 silly registry.get     connection: 'keep-alive',
+45 silly registry.get     'x-served-by': 'cache-sin6920-SIN',
+45 silly registry.get     'x-cache': 'HIT',
+45 silly registry.get     'x-cache-hits': '5',
+45 silly registry.get     'x-timer': 'S1453403173.714990,VS0,VE0',
+45 silly registry.get     vary: 'Accept' } ]
+46 verbose etag https://registry.npmjs.org/stream-combiner from cache
+47 silly addNameRange number 2 { name: 'stream-combiner', range: '*', hasData: true }
+48 silly addNameRange versions [ 'stream-combiner',
+48 silly addNameRange   [ '0.0.0',
+48 silly addNameRange     '0.0.1',
+48 silly addNameRange     '0.0.2',
+48 silly addNameRange     '0.0.4',
+48 silly addNameRange     '0.1.0',
+48 silly addNameRange     '0.2.0',
+48 silly addNameRange     '0.2.1',
+48 silly addNameRange     '0.2.2' ] ]
+49 verbose addNamed [ 'stream-combiner', '0.2.2' ]
+50 verbose addNamed [ '0.2.2', '0.2.2' ]
+51 silly lockFile 06f7b0e6-stream-combiner-0-2-2 stream-combiner@0.2.2
+52 verbose lock stream-combiner@0.2.2 /home/sajeeb/.npm/06f7b0e6-stream-combiner-0-2-2.lock
+53 silly lockFile 4381753a-mbiner-stream-combiner-0-2-2-tgz https://registry.npmjs.org/stream-combiner/-/stream-combiner-0.2.2.tgz
+54 verbose lock https://registry.npmjs.org/stream-combiner/-/stream-combiner-0.2.2.tgz /home/sajeeb/.npm/4381753a-mbiner-stream-combiner-0-2-2-tgz.lock
+55 verbose addRemoteTarball [ 'https://registry.npmjs.org/stream-combiner/-/stream-combiner-0.2.2.tgz',
+55 verbose addRemoteTarball   'aec8cbac177b56b6f4fa479ced8c1912cee52858' ]
+56 info retry fetch attempt 1 at 01:06:12
+57 verbose fetch to= /tmp/npm-15899-MRxCZhP8/registry.npmjs.org/stream-combiner/-/stream-combiner-0.2.2.tgz
+58 http GET https://registry.npmjs.org/stream-combiner/-/stream-combiner-0.2.2.tgz
+59 http 200 https://registry.npmjs.org/stream-combiner/-/stream-combiner-0.2.2.tgz
+60 silly lockFile 4381753a-mbiner-stream-combiner-0-2-2-tgz https://registry.npmjs.org/stream-combiner/-/stream-combiner-0.2.2.tgz
+61 silly lockFile 4381753a-mbiner-stream-combiner-0-2-2-tgz https://registry.npmjs.org/stream-combiner/-/stream-combiner-0.2.2.tgz
+62 silly lockFile 06f7b0e6-stream-combiner-0-2-2 stream-combiner@0.2.2
+63 silly lockFile 06f7b0e6-stream-combiner-0-2-2 stream-combiner@0.2.2
+64 silly lockFile b36c76fd-stream-combiner stream-combiner@
+65 silly lockFile b36c76fd-stream-combiner stream-combiner@
+66 error Error: EACCES, mkdir '/home/sajeeb/.npm/stream-combiner/0.2.2'
+66 error  { [Error: EACCES, mkdir '/home/sajeeb/.npm/stream-combiner/0.2.2']
+66 error   errno: 3,
+66 error   code: 'EACCES',
+66 error   path: '/home/sajeeb/.npm/stream-combiner/0.2.2',
+66 error   parent: 'angularexample' }
+67 error Please try running this command again as root/Administrator.
+68 error System Linux 3.13.0-71-generic
+69 error command "/usr/bin/node" "/usr/bin/npm" "install" "stream-combiner" "--save-dev"
+70 error cwd /var/www/html/assignment
+71 error node -v v0.10.41
+72 error npm -v 1.4.29
+73 error path /home/sajeeb/.npm/stream-combiner/0.2.2
+74 error code EACCES
+75 error errno 3
+76 error stack Error: EACCES, mkdir '/home/sajeeb/.npm/stream-combiner/0.2.2'
+77 verbose exit [ 3, true ]
