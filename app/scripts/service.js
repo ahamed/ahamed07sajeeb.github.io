@@ -193,6 +193,12 @@ angular.module('ipAssignment')
 			index: 17,
 			que: "What is an attribute of a Tag? Give example of commonly used attributes of a Tag.",
 			ans: "HTML tags contains attributes which provides extra bit of informations. The attributes appear inside the opening tag. An attribute has an attribute name and an attribute value."
+		},
+		{
+			index: 18,
+			que: "Describe the difference among HTML element,tags and attribute.",
+			ans: "HTML elements:   An element in HTML represents some kind of structure or semantics and generally consists of a start tag, content, and an end tag. The following is a paragraph element:<br> <pre>&lt;p&gt;</pre> <br> This is the content of the paragraph element.<br> <pre>&lt;p/&gt;</pre>.<br> HTML TAG: Tags are used to mark up the start and end of an HTML element.A start tag consists of an opening angle bracket (<) followed by the element name, zero or more space separated attribute/value pairs, and a closing angle bracket (>).A start tag with no attributes:<br> <pre>&lt;h1&gt;</pre> <br>A start tag with an attribute:<br> <pre>&lt;p class=\"info\"&gt;</pre> .<br> A end tag <br><pre>&lt;h2/&gt;</pre>.<br> There are some void tags also .<br> <pre>&lt;br&gt;</pre>. <br>HTML ATTRIBUTES: An attribute defines a property for an element, consists of an attribute/value pair, and appears within the element’s start tag. An element’s start tag may contain any number of space separated attribute/value pairs. The most popular misuse of the term \"tag\" is referring to alt attributes as \"alt tags\". There is no such thing in HTML. Alt is an attribute, not a tag. Suppose <br> <pre&lt;img src=\"foobar.gif\" alt=\"A\" foo can be balanced on a bar by placing its fubar on the bar's foobar.&gt;</pre> here alt is an attribute. <pre>&copy;shibbir</pre>"
+
 		}
 
 
