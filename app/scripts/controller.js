@@ -26,4 +26,7 @@ $scope.student = coverFactory.getStudent(0);
 	$scope.answer = ansFactory.getAnsOfQues();
 
 }])
+.controller('AnswerController2',['$scope','ansFactory2',function($scope,ansFactory2){
+	$scope.answer2 = ansFactory2.getAnswersOfMid2();
+}])
 ;

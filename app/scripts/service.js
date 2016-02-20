@@ -212,4 +212,93 @@ angular.module('ipAssignment')
 
 
 })
+.factory('ansFactory2',function(){
+	var ans2 = {};
+
+
+	var ansOf2 = [
+		{
+			index:1,
+			que:'What is the purpose of using Array in PHP? Give example of different types of Array that are used in PHP.',
+			ans:'See question 13 at mid-1 part.'
+		},
+		{
+			index:2,
+			que:'You have an array that stores numeric values. Write a function in PHP to find the largest number in the array. The array will be passed as a parameter to the function.',
+			ans:'See question 14 at mid-1 part.'
+		},
+		{
+			index:3,
+			que:'What are the differences between require and include, include_once and require_once?',
+			ans:'See question 15 at mid-1 part.'
+		},
+		{
+			index:4,
+			que:'What are the differences between Get and Post methods in form submitting? Give the case where we can use get and we can use post methods?',
+			ans:''
+		},
+		{
+			index:5,
+			que:'Assume that you are creating a new array called birds.<br>a. How do you declare a new empty array?<br>b. How do you declare a new array with space allotted for 4 elements?<br>c. How do you declare a new array containing the names of 4 birds (note, some types of birds are robin, sparrow, hummingbird, eagle, crow)<br>d. Assuming the array has already been created, how do you set the element at the initialposition of the array to the bird name "robin"?<br>e. Write a loop that prints out all of the elements in birds.',
+			ans:''
+		},
+		{
+			index:6,
+			que:'Write a function that reads a number and prints the even numbers between 1 and the value provided.',
+			ans:''
+		},
+		{
+			index:7,
+			que:'Write the basic structure of PHP programming.',
+			ans:''
+		},
+		{
+			index:8,
+			que:'What is the purpose of $_REQUEST variable in PHP?',
+			ans:''
+		},
+		{
+			index:9,
+			que:'Describe how input from an XHTML form is retrieved in a PHP program.',
+			ans:''
+		},
+		{
+			index:10,
+			que:'Write a PHP script that tests whether an e-mail address is input correctly. Verify that the input begins with series of characters, followed by the @ character, another series of characters, a period (.) and a final series of characters.',
+			ans:''
+		},
+		{
+			index:11,
+			que:'Write a PHP regular expression pattern that matches a string that satisfies the following description: The string must begin with the (uppercase) letter A. Any three alphanumeric characters must follow. After these, the letter B (uppercase or lowercase) must be repeated one or more times, and the string must end with two digits.',
+			ans:''
+		},
+		{
+			index:12,
+			que:'Describe how cookies can be used to store information on a computer and how the information can be retrieved by a PHP script. Assume that cookies are not disabled on the client.',
+			ans:''
+		},
+		{
+			index:13,
+			que:'The server has a database named ADDRESSBOOK, with a single table named Contacts (as shown in Figure 1.2).The database is hosted remotely at example.com. The administrator username is admin and the password is abc123.<br>I. Write code to connect to the database.<br>II. Write code to store the details submitted from the form into the database.<br>III. Write code to retrieve and display (in an appropriate format) all the mobile phone numbers listed in the database, along with the names of the corresponding contacts.',
+			ans:''
+		},
+		{
+			index:14,
+			que:'State the purpose of the following SQL keywords:<br>a) ASC<br>b) FROM<br>c) DESC<br>d) INSERT<br>e) LIKE<br>f) UPDATE<br>g) SET<br>h) VALUES<br>i) ON',
+			ans:''
+		}
+
+	];
+
+
+
+	ans2.getAnswersOfMid2 = function(){
+
+
+		return ansOf2;
+
+	};
+
+	return ans2;
+})
 ;
