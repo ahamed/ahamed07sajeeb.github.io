@@ -266,37 +266,37 @@ angular.module('ipAssignment')
 		{
 			index:8,
 			que:'What is the purpose of $_REQUEST variable in PHP?',
-			ans:''
+			ans:'PHP $_REQUEST variable is used to collect data after submitting a HTML form. It is an associative array which contains contents of $_GET, $_POST and $_COOKIE by default.'
 		},
 		{
 			index:9,
 			que:'Describe how input from an XHTML form is retrieved in a PHP program.',
-			ans:''
+			ans:'Solve yourself.'
 		},
 		{
 			index:10,
 			que:'Write a PHP script that tests whether an e-mail address is input correctly. Verify that the input begins with series of characters, followed by the @ character, another series of characters, a period (.) and a final series of characters.',
-			ans:''
+			ans:'<pre><?php\n$email = "internet_programming@ip.com";\nif(!filter_var($email, FILTER_VALIDATE_EMAIL) === false){\n	echo "Valid email";\n}else{\n	echo "Invalid email";\n}\n?></pre>'
 		},
 		{
 			index:11,
 			que:'Write a PHP regular expression pattern that matches a string that satisfies the following description: The string must begin with the (uppercase) letter A. Any three alphanumeric characters must follow. After these, the letter B (uppercase or lowercase) must be repeated one or more times, and the string must end with two digits.',
-			ans:''
+			ans:'The PHP code that start with uppercase letter A and any three alphanumeric characters and then letter B or b repeated one or more times and the string ends with two digits is given bellow-\n<pre><?php\n$pattern = \'\/^\\A.[a-zA-Z0-9]{3}(b|B)+[0-9]{2}$\/\';\n$string = \'A3deBbBBbbbBBBbb32\';\nif(preg_match($pattern, $string)){\n	echo "Match";\n}else{\n	echo "Not match";\n}\n?></pre>\nFor more about regular expression visit - <a href="http://www.tutorialspoint.com/php/php_regular_expression.htm" target="_blank">http://www.tutorialspoint.com/php/php_regular_expression.htm</a>'
 		},
 		{
 			index:12,
 			que:'Describe how cookies can be used to store information on a computer and how the information can be retrieved by a PHP script. Assume that cookies are not disabled on the client.',
-			ans:''
+			ans:'Cookies cab be used to store information on a computer by sending HTTP header. In PHP it is set by a function <i>setcookie()</i>. This function has six arguments and looks like-<br><pre>setcookie(name, value, expire, path, domain, security);</pre><br><ul style="list_style_type: square"><br>	<li><b>Name</b> − This sets the name of the cookie and is stored in an environment variable called HTTP_COOKIE_VARS. This variable is used while accessing cookies.</li><br><li><b>Value</b> − This sets the value of the named variable and is the content that you actually want to store.</li><br>	<li><b>Expiry</b> − This specify a future time in seconds</li><br><li><b>Path</b> − This specifies the directories for which the cookie is valid.</li><br><li><b>Domain</b> − This can be used to specify the domain name in very large domains and must contain at least two periods to be valid. It is optional.</li><br><li><b>Security</b> − This can be set to 1 to specify that the cookie should only be sent by secure transmission using HTTPS otherwise set to 0 which mean cookie can be sent by regular HTTP.</li><br></ul><br>we can retrive the cookies value in PHP by just using $_COOKIE superglobal variable. i.e. \n<pre><?php\n   echo $_COOKIE[name]; // this will print the value of the cookie \n?></pre>'
 		},
 		{
 			index:13,
 			que:'The server has a database named <strong>ADDRESSBOOK</strong>, with a single table named Contacts (as shown in Figure 1.2).The database is hosted remotely at <strong>example.com.</strong> The administrator username is <strong>admin</strong> and the password is <strong>abc123.</strong>\n<ol type=\'i\'>\n<li>Write code to connect to the database.</li>\n<li>Write code to store the details submitted from the form into the database.</li>\n<li>Write code to retrieve and display (in an appropriate format) all the mobile phone numbers listed in the database, along with the names of the corresponding contacts.</li>\n<ol>',
-			ans:''
+			ans:'See your assignment.'
 		},
 		{
 			index:14,
 			que:'State the purpose of the following SQL keywords:\n<ol type=\'a\'>\n<li> ASC</li>\n<li> FROM</li>\n<li> DESC</li>\n<li> INSERT</li>\n<li> LIKE</li>\n<li> UPDATE</li>\n<li> SET</li>\n<li> VALUES</li>\n<li> ON</li>\n</ol>',
-			ans:''
+			ans:'<ul><li><b>ASC: </b>This used for ordering data ascending order.</li><li><b>FROM:  </b>This keyword is used for perform various operations such as insert, delete, update and it specifies the table name. </li><li><b>DESC: </b>This used for ordering data descending order.</li> <li><b>INSERT: </b>This is used for inserting data or record into a table.</li><li><b>LIKE: </b>This keyword is used for searching some data into a table. </li><li><b>UPDATE: </b>This is used for edit or update any record. </li><li><b>SET: </b>SET is used for update a record and set the updated data.</li><li><b>VALUES: </b>This is used for inserting values inside a table.</li><li><b>ON: </b>The ON clause is used to join tables where the column names don’t match in both tables</li></ul>'
 		}
 
 	];
