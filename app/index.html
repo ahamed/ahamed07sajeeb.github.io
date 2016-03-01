@@ -13,6 +13,9 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <!--<link rel="stylesheet" href="../prism/prism.css">-->
+    <link rel="stylesheet" href="../bower_components/syntaxhighlighter/styles/shCore.css">
+    <link rel="stylesheet" href="../bower_components/syntaxhighlighter/styles/shThemeDefault.css">
     <!-- endbuild -->
   </head>
   <body>
@@ -73,7 +76,7 @@
       </div>
     </div>
 
-
+      
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
@@ -98,10 +101,16 @@
     <script src="../bower_components/angular-animate/angular-animate.js"></script>
     <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
     
+    <script src="../bower_components/syntaxhighlighter/scripts/shBrushPhp.js"></script>
+    <script src="../bower_components/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+    <script src="../bower_components/syntaxhighlighter/scripts/shBrushXml.js"></script>
+    
 
         <script src="scripts/app.js"></script>
         <script src="scripts/controller.js"></script>
         <script src="scripts/service.js"></script>
+        <script type="text/javascript">SyntaxHighlighter.all();</script>
+
         <!-- endbuild -->
 </body>
 </html>

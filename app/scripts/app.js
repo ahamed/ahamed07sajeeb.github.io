@@ -11,6 +11,16 @@
  
 angular
   .module('ipAssignment', ['ui.router','ngSanitize'])
+  .directive('ngPrism', [function() {
+    return {
+        restrict: 'A',
+        link: function($scope, element, attrs) {
+            element.ready(function() {
+                Prism.highlightElement(element[0]);
+            });
+        }
+    }
+  }])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('app',{
