@@ -271,7 +271,7 @@ angular.module('ipAssignment')
 		{
 			index:9,
 			que:'Describe how input from an XHTML form is retrieved in a PHP program.',
-			ans:'Solve yourself.'
+			ans:'A user submits information to the server via a $_GET or $_POST command.The field key and values are carried into the supper global arrays for GET or POST.To use the data a function "expand" in the php script is called to create the variable/value pairs to use within the script.'
 		},
 		{
 			index:10,
