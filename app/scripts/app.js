@@ -51,6 +51,15 @@ angular
           }
         }
       })
+      .state('app.2014',{
+        url: 'ans2014',
+        views:{
+          'content@':{
+            templateUrl: "views/2014.html",
+            controller: "AnswerController3"
+          }
+        }
+      })
       ;
 
       $urlRouterProvider.otherwise("/");

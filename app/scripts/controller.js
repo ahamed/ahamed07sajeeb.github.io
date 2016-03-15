@@ -29,4 +29,7 @@ $scope.student = coverFactory.getStudent(0);
 .controller('AnswerController2',['$scope','ansFactory2',function($scope,ansFactory2){
 	$scope.answer2 = ansFactory2.getAnswersOfMid2();
 }])
+.controller('AnswerController3',['$scope','ansFactory3',function($scope,ansFactory3){
+	$scope.answer3 = ansFactory3.getAnswersOf2014();
+}])
 ;

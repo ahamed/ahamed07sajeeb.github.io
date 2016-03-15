@@ -132,7 +132,7 @@ pre{
 }
 
 ul.navbar-nav >li{
-  width: 250px;
+  width: 150px;
 }
 ul.navbar-nav > li > a{
   text-align: center;
@@ -185,6 +185,12 @@ pre {
   padding: 0 1em 1em 1em; 
   margin: 1em auto 2em auto; 
   
+}
+tr td, tr th{
+  padding: 5px;
+}
+tr th{
+  text-align: center;
 }
 
 /*blockquote {

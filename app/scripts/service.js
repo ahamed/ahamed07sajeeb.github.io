@@ -167,7 +167,7 @@ angular.module('ipAssignment')
 		{
 			index: 12,
 			que: "Write a script that inputs integers (one at a time) and passes them one at a time to function isEven, which uses the modulus operator to determine whether an integer is even. The function should take an integer argument and return true if the integer is even and false otherwise. Use sentinel-controlled looping and a prompt dialog.",
-			ans: "<pre class=\'brush: js>\'>   &lt;script&gt;\n	while(true){\n\n		var number = parseInt(prompt(\"Enter an integer number\"));\n		if(number &lt; 0){\n			break;\n		}else{\n			if(isEven(number)){\n				alert(number+ \" is an even number\");\n			}else{\n				alert(number+ \" is an odd number\");\n			}\n		}\n	}\n\n	function isEven(number){\n		if(number %2)\n			return true;\n		else\n			return false;\n	}\n   &lt;/script&gt;<pre class=\'brush: js>\'>"
+			ans: "<pre class=\'brush: js>\'>   &lt;script&gt;\n	while(true){\n\n		var number = parseInt(prompt(\"Enter an integer number\"));\n		if(number &lt; 0){\n			break;\n		}else{\n			if(isEven(number)){\n				alert(number+ \" is an even number\");\n			}else{\n				alert(number+ \" is an odd number\");\n			}\n		}\n	}\n\n	function isEven(number){\n		if(number %2 === 0)\n			return true;\n		else\n			return false;\n	}\n   &lt;/script&gt;<pre class=\'brush: js>\'>"
 		},
 		{
 			index: 13,
@@ -286,7 +286,7 @@ angular.module('ipAssignment')
 		{
 			index:12,
 			que:'Describe how cookies can be used to store information on a computer and how the information can be retrieved by a PHP script. Assume that cookies are not disabled on the client.',
-			ans:'Cookies cab be used to store information on a computer by sending HTTP header. In PHP it is set by a function <i>setcookie()</i>. This function has six arguments and looks like-<br><pre>setcookie(name, value, expire, path, domain, security);</pre><br><ul style="list_style_type: square"><br>	<li><b>Name</b> − This sets the name of the cookie and is stored in an environment variable called HTTP_COOKIE_VARS. This variable is used while accessing cookies.</li><br><li><b>Value</b> − This sets the value of the named variable and is the content that you actually want to store.</li><br>	<li><b>Expiry</b> − This specify a future time in seconds</li><br><li><b>Path</b> − This specifies the directories for which the cookie is valid.</li><br><li><b>Domain</b> − This can be used to specify the domain name in very large domains and must contain at least two periods to be valid. It is optional.</li><br><li><b>Security</b> − This can be set to 1 to specify that the cookie should only be sent by secure transmission using HTTPS otherwise set to 0 which mean cookie can be sent by regular HTTP.</li><br></ul><br>we can retrive the cookies value in PHP by just using $_COOKIE superglobal variable. i.e. \n<pre><?php\n   echo $_COOKIE[name]; // this will print the value of the cookie \n?></pre>'
+			ans:'Cookies cab be used to store information on a computer by sending HTTP header. In PHP it is set by a function <i>setcookie()</i>. This function has six arguments and looks like-\n<pre>setcookie(name, value, expire, path, domain, security);</pre>\n<ul style="list_style_type: square"><br>	<li><b>Name</b> − This sets the name of the cookie and is stored in an environment variable called HTTP_COOKIE_VARS. This variable is used while accessing cookies.</li><br><li><b>Value</b> − This sets the value of the named variable and is the content that you actually want to store.</li><br>	<li><b>Expiry</b> − This specify a future time in seconds</li><br><li><b>Path</b> − This specifies the directories for which the cookie is valid.</li><br><li><b>Domain</b> − This can be used to specify the domain name in very large domains and must contain at least two periods to be valid. It is optional.</li><br><li><b>Security</b> − This can be set to 1 to specify that the cookie should only be sent by secure transmission using HTTPS otherwise set to 0 which mean cookie can be sent by regular HTTP.</li><br></ul><br>we can retrive the cookies value in PHP by just using $_COOKIE superglobal variable. i.e. \n<pre><?php\n   echo $_COOKIE[name]; // this will print the value of the cookie \n?></pre>'
 		},
 		{
 			index:13,
@@ -298,6 +298,7 @@ angular.module('ipAssignment')
 			que:'State the purpose of the following SQL keywords:\n<ol type=\'a\'>\n<li> ASC</li>\n<li> FROM</li>\n<li> DESC</li>\n<li> INSERT</li>\n<li> LIKE</li>\n<li> UPDATE</li>\n<li> SET</li>\n<li> VALUES</li>\n<li> ON</li>\n</ol>',
 			ans:'<ul><li><b>ASC: </b>This used for ordering data ascending order.</li><li><b>FROM:  </b>This keyword is used for perform various operations such as insert, delete, update and it specifies the table name. </li><li><b>DESC: </b>This used for ordering data descending order.</li> <li><b>INSERT: </b>This is used for inserting data or record into a table.</li><li><b>LIKE: </b>This keyword is used for searching some data into a table. </li><li><b>UPDATE: </b>This is used for edit or update any record. </li><li><b>SET: </b>SET is used for update a record and set the updated data.</li><li><b>VALUES: </b>This is used for inserting values inside a table.</li><li><b>ON: </b>The ON clause is used to join tables where the column names don’t match in both tables</li></ul>'
 		}
+		
 
 	];
 
@@ -312,4 +313,62 @@ angular.module('ipAssignment')
 
 	return ans2;
 })
+
+.factory('ansFactory3',function(){
+	var ans3 = {};
+
+
+	var ansOf2014 = [
+
+		{
+			index:1,
+			que:'a)What is semantic HTML? What is the difference between linking to and image, a websites and an email address? How can you eliminate the blue border around linked images on web page?<br>b) With the help of HTML canvas element, write a code segment to draw a triangle.',
+			ans:'a) Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.\n\nLinking to an image we use &lt;img&gt; tag and use src attribute to the locate the location of the image. On the other hand we use hyperlink tag i.e. &lt;a&gt; tag to link an email. Here we use hyperlink reference (href) attribute to link the email. It is essential to ensure that in the href attribute we use "mailto".\nExample: \n<pre>&lt;img src="path/to/my/image.png"&gt;\n&lt;a href="mailto:abc@example.com"&gt;Send Mail&lt;/a&gt;\n&lt;style&gt;\n    img{\n        border: 0px solid;\n    }\n&lt;/style&gt;</pre>\nb) To do this task we need to make a canvas element in HTML and handle it via JavaScript.\n<pre>&lt;canvas id="myCanvas"&gt;&lt;/canvas&gt;\n&lt;script&gt;\n    var c=document.getElementById("myCanvas");\n    var context=c.getContext("2d");\n    context.beginPath();\n    context.moveTo(0, 0);\n    context.lineTo(0, 200);\n    context.lineTo(200, 200);\n    context.closePath();\n    context.stroke();\n&lt;/script&gt;</pre>\n\nThis script will draw a triangle inside the canvas.\n\n<br><br>C) The new HTML5 APIs are: <br><ul><br><li>HTML Geolocation</li><br><li>HTML Grag and Drop</li><br><li>HTML Local Storage</li><br><li>HTML Application Cache</li><br><li>HTML Web Workers</li><br><li>HTML SSE</li><br></ul>'
+		},
+		{
+			index:2,
+			que:'<h2>Consider the following form</h2>    <form action="#" method="POST">        <table>            <tr>                <td>Name</td>                <td><input type="text" name="name"></td>            </tr>            <tr>                <td>Roll</td>                <td><input type="text" name="roll"></td>            </tr>            <tr>                <td>Age</td>                <td><input type="text" name="age"></td>            </tr>            <tr>                <td>Comments</td>                <td><textarea cols="30" rows="5"></textarea></td>            </tr>            <tr>                <td></td>                <td><input type="button" name="name" value="Submit"><td>            </tr>        </table></form>',
+			ans:'Say the HTML form looks like-<br><pre>&lt;form action="#" method="POST"&gt; \n   Name: &lt;input type="text" name="name" &gt;\n    Roll: &lt;input type="text" name="roll"&gt;\n    Age: &lt;input type="text" name="age"&gt;\n    Comments: &lt;textarea name="comments"cols="20"rows="20"&gt;&lt;textarea&gt;\n    &lt;input type="submit" name="submit" value="Submit"&gt;\n&lt;/form&gt;</pre><br><br>Say the table name is <b>info</b>.<br><pre>$name = $_POST["name"];\n$roll = $_POST["roll"];\n$age = $_POST["age"];\n$comments = $_POST["comments"];\na) insert into table_name values("$name","$roll","$age","$comments");\nb) select * from info;\nc) select * from info order by roll asc;\nd) update info set comments = NULL where roll = 1;</pre>'
+		},
+		{
+
+			index:3,
+			que:'a) Name different selectors that are used in CSS. Explain the appropiate use of these selectors.<br>b) Describe diffrent values of position property that are used in CSS.<br>c) Write the following CSS rules: <ol tyle="i"><li>A rule that makes all text 1.5 time larger than the base font of the system and colors the text red.</li><li>A rule that changes the color of all elements containing attribute class="greenMove" to green and shifts them down 25 pixels and right 15 pixels.</li></ol>',
+			ans:'a) See answer 10 at mid-01. <br>b) See answer 8 at mid-01<br>c) <pre>&lt;style&gt;\n// i)\n\n    *{\n        font-size : 1.5em;\n        color: red;\n    }\n    \n//ii)\n\n    .greenMove * {\n        color: green;\n        position: absolute;\n        top: 25px;\n        left: 15px;\n    }\n&lt;/style&gt;</pre>'
+		},
+		{
+			index:4,
+			que:'a) Write down the proceure to invoke a function with function constructor in JavaScript.<br> b) What is the difference between the prompt and confirm dialog box?<br>c) Write a Javascript that inputs integers (one at a time) and passes them one at a time to function isEven, which uses the modulus operator to determine whether an integer is even. The function should take an integer argument and return true if the integer is even and false otherwise. Use sentinel-controlled looping and a prompt dialog.',
+			ans:'a) Try yourself. <br> b) <table border=1><tr><th>Prompt</th><th>Confirm</th></tr><tr><td>Prompt ask to some user input from the users. </td><td>Confirm ask user to ensure that he want to perform the action or not.</td></tr><tr><td>Prompt returns string.</td><td>Confirm returns true or false. </td></tr></table><br>c) See question 12 mid-01'
+		},
+		{
+			index:5,
+			que:'a) Explain $_SERVER[\'DOCUMENT_ROOT\'] and $_SERVER[\'PHP_SELF\'] whit examples.<br>b) Write and applet that inputs three floating point numbers from the user and displays the sum, average, product, smallest and largest of these numbers as strings on the applet. The Name of the applet class should be <b>ArithmaticOperation</b> which extends <b>JApplet</b> class. Every input should be taken through calling <b>JOptionPane.showInputDialog("Enter First/Second/Third Number")</b> three times for three floating-point numbers. The task of taking input and perfom the said arithmatic operation in <b>public void init()</b> method and outputs have to be shown in <b>public void paint(Graphics g)</b> method by calling <b>g.drawString()</b> method.',
+			ans:'',
+		},
+		{
+			index:6,
+			que:'a) What is the purpose of useing Array in PHP? Give example of different types of Array that are used in PHP.<br>b) Mention the Super Global variable of PHP. What is the purpose of $_REQUEST variable in PHP?<br>c) Explain the difference require and include, include_once and require_once.',
+			ans:'a) See question 13 at mid-1 part.<br>b) See question 8 at mid-02 part.<br>c) See question 15 at mid-01 part.'
+		}
+
+
+
+	];
+
+
+
+	ans3.getAnswersOf2014 = function(){
+		return ansOf2014;
+
+		
+
+	};
+
+	return ans3;
+})
+
+
+
+
 ;
