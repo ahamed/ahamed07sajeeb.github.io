@@ -56,7 +56,7 @@ angular
         views:{
           'content@':{
             templateUrl: "views/2014.html",
-            controller: "AnswerController3"
+            controller: 'AnswerController3'
           }
         }
       })
