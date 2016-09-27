@@ -76,8 +76,10 @@
 			}
 		
 
-
-
+			
+			
+			var win = localStorage.getItem("win") || 0;
+			var loss = localStorage.getItem("loss") || 0;
 
 			// Hang man game part
 
@@ -159,7 +161,8 @@
 					if(!isFound){
 						isHang ++;
 						if( isHang >= 9){
-							localStorage.setItem("loss",(parseInt(localStorage.getItem("loss"))+1));
+							//localStorage.setItem("loss",(parseInt(localStorage.getItem("loss") || '0')+1));
+							localStorage.setItem("loss",parseInt(loss)+1);
 							$(".message").html("Hang the man!<br> The word is: <b>"+ selectedWord+"</b><br>Win: "+localStorage.getItem("win")+"<br>Loss: "+localStorage.getItem("loss"));
 							isFinished = true;
 						
@@ -169,7 +172,8 @@
 					}
 					if(isMatch === wordLength){
 
-						localStorage.setItem("win",(parseInt(localStorage.getItem("win"))+1));
+						//localStorage.setItem("win",(parseInt(localStorage.getItem("win") || '0')+1));
+						localStorage.setItem("win",parseInt(win)+1);
 													$(".message").html("Congratulations!<br> The word is: "+ selectedWord+"<br>Win: "+localStorage.getItem("win")+"<br>Loss: "+localStorage.getItem("loss"));
 					}
 					
