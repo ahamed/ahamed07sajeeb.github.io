@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<script src="jquery.min.js"></script>	
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>	-->
+	</head>
+	<body>
+		
+		<div class="board">
+			<div class="keyboard">
+				<div class="row">
+					<div class="col-sm-12 monitor">
+						<div class="message"></div>
+						<div class="showDesh"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<input class="btn" type="button" id="b1" value="A">
+						<input class="btn" type="button" id="b2" value="B">
+						<input class="btn" type="button" id="b3" value="C">
+						<input class="btn" type="button" id="b4" value="D">
+						<input class="btn" type="button" id="b5" value="E">
+						<input class="btn" type="button" id="b6" value="F">
+						<input class="btn" type="button" id="b7" value="G">
+						<input class="btn" type="button" id="b8" value="H">
+						<input class="btn" type="button" id="b9" value="I">
+						<input class="btn" type="button" id="b10" value="J">
+						<input class="btn" type="button" id="b11" value="K">
+						<input class="btn" type="button" id="b12" value="L">
+						<input class="btn" type="button" id="b13" value="M">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<input class="btn" type="button" id="b14" value="N">
+						<input class="btn" type="button" id="b15" value="O">
+						<input class="btn" type="button" id="b16" value="P">
+						<input class="btn" type="button" id="b17" value="Q">
+						<input class="btn" type="button" id="b18" value="R">
+						<input class="btn" type="button" id="b19" value="S">
+						<input class="btn" type="button" id="b20" value="T">
+						<input class="btn" type="button" id="b21" value="U">
+						<input class="btn" type="button" id="b22" value="V">
+						<input class="btn" type="button" id="b23" value="W">
+						<input class="btn" type="button" id="b24" value="X">
+						<input class="btn" type="button" id="b25" value="Y">
+						<input class="btn" type="button" id="b26" value="Z">
+					</div>
+				</div>
+			</div>
+			<input type="button" id="pa" value="Play Again">
+		</div>
+		
+		<script>
+		
+		
+			
+			// XML code connection
+			var Connect = new XMLHttpRequest();
+			// Define which file to open and
+			// send the request.
+			Connect.open("GET", "data.xml", false);
+			Connect.setRequestHeader("Content-Type", "text/xml");
+			Connect.send();
+			// Place the response in an XML document.
+			var theDocument = Connect.responseXML;
+			var dictionary = theDocument.children[0];
+	
+			var word = dictionary.getElementsByTagName("word");
+			var words = [];
+			for( var i = 0 ; i < word.length; i++){
+				words[i] = word[i].textContent.toString();
+			}
+		
+
+
+
+
+			// Hang man game part
+
+			var length = words.length;
+			
+			function getRandom(min, max) {
+			    return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			
+			
+					
+
+			function getValueOfLetter(ind){
+				return $("#"+ind).val().toLowerCase();
+			}
+			
+			function loadThis(){
+				var selector = getRandom(0,(length-1));
+				var selectedWord = words[selector].toLowerCase();
+				var wordLength = selectedWord.length;
+				
+								
+
+				for( var i = 1; i <= wordLength; i++){
+					$(".showDesh").append("<span id='s"+i+"'>_</span>");
+					
+				}
+				
+				var indicator = 1;
+				var isHang = 0;
+				var checker = [];
+				var isFound = false;
+				var isMatch = 0;
+				var msg = "HANG MAN!";
+				var isFinished = false;
+				
+			
+			
+			
+				// initialize the checker array with zero
+					
+					for( var i = 0; i < wordLength; i++){
+						checker[i] = 0;
+					}
+					
+		
+		
+				// initialization buttons
+				
+					for( var i =1 ; i <= 26; i++){
+						$("#b"+i).prop("disabled",false);
+					}
+					$("#pa").prop("disabled",false);
+				
+				$("input").click(function(){
+				
+					if(!isFinished){
+						var id = this.id;
+					var letter = getValueOfLetter(id);
+					isFound = false;				
+					
+				
+				
+				
+					//check if the pressed letter is contained in the word or not
+					for( var i = 0; i < wordLength; i++){
+						if(letter === selectedWord[i]){
+							if(checker[i] === 0){
+								checker[i] = 1;
+								$("#s"+(i+1)).text(letter);
+								isFound = true;
+								isMatch ++;
+							}
+
+						}
+					}
+
+
+					if(!isFound){
+						isHang ++;
+						if( isHang >= 9){
+							localStorage.setItem("loss",(parseInt(localStorage.getItem("loss"))+1));
+							$(".message").html("Hang the man!<br> The word is: <b>"+ selectedWord+"</b><br>Win: "+localStorage.getItem("win")+"<br>Loss: "+localStorage.getItem("loss"));
+							isFinished = true;
+						
+													
+						}
+						
+					}
+					if(isMatch === wordLength){
+
+						localStorage.setItem("win",(parseInt(localStorage.getItem("win"))+1));
+													$(".message").html("Congratulations!<br> The word is: "+ selectedWord+"<br>Win: "+localStorage.getItem("win")+"<br>Loss: "+localStorage.getItem("loss"));
+					}
+					
+					$(this).prop('disabled', true);
+					$(this).css("color","red");
+					$("#pa").prop("disabled",false);
+					$("#pa").css("color","black");
+
+					
+					}
+				
+									
+				});
+				
+				
+			} 
+			
+			$(document).ready(loadThis);
+			$("#pa").click(function(){
+				window.location.reload();
+			});
+			
+			
+			
+		</script>
+
+	</body>
+	
+</html>

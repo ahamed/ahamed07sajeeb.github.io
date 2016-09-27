@@ -1,0 +1,69 @@
+body{
+	background: black;
+}
+.board{
+	background: gray;
+	padding: 20px;
+	width: 800px;
+	height: 400px;
+	margin-left: 200px;
+	margin-top: 100px;
+}
+.keyboard{
+	background: lightgray;
+	width: 95%;
+	height: 40%;
+	margin-left: 20px;
+	margin-top: 240px;
+}
+.row{
+	position: relative;
+	width: 100%;
+
+}
+.col-sm-12{
+	width: 100%;
+	float: left;
+	padding-left: 80px;
+	padding-top: 20px;
+}
+.btn{
+	background: lightgray;
+	color: black;
+	width: 40px;
+	border: 0px;
+	padding: 10px;
+
+	
+}
+.monitor{
+	background: black;
+	width: 90%;
+	height: 200px;
+	position: absolute;
+	margin-top: -250px;
+
+
+}
+
+span[id^="s"]{
+	color: red;
+	padding-right: 10px;
+	width: 20px;
+	font-size: 45px;
+}
+.showDesh{
+	margin-top: 20px;
+	margin-left: 180px;
+
+	vertical-align: center;
+	
+}
+.message{
+	color: red;
+	background: black;
+	text-align: center;
+	height: 100px;
+	width: 100%;
+	margin-left: -30px;
+}
