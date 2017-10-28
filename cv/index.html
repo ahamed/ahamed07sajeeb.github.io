@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <style type="text/css">
         .photo {
@@ -76,13 +77,19 @@
             margin-bottom: 100px;
             -webkit-box-shadow: 2px 2px 8px 2px black;
         }
+        @media print{
+            .row{
+                float: none !important;
+            }
+        }
+    
 
     </style>
 
 
 </head>
 <body>
-<div class="container custom">
+<div class="container custom" id="wraper">
     <div class="row">
         <div class="col-sm-3 text-center rounded float-left col-xs-3">
             <img src="2.jpg" class="img-responsive photo" width="400">
@@ -93,7 +100,7 @@
                 <div class="col-sm-6 col-xs-6">
                     <div class="row">
                         <div class="col-sm-3 col-xs-3">
-                            <strong>Email : </strong>
+                            <strong>Email: </strong>
                         </div>
                         <div class="col-sm-9 col-xs-9">
                             <span>sajeeb07ahamed@gamil.com</span>
@@ -101,7 +108,7 @@
                     </div><!-- end email row-->
                     <div class="row">
                         <div class="col-sm-3 col-xs-3">
-                            <strong>Mobile : </strong>
+                            <strong>Mobile: </strong>
                         </div>
                         <div class="col-sm-9 col-xs-9">
                             <span>+880 1778 91 98 03</span>
@@ -112,7 +119,7 @@
                 <div class="col-sm-6 col-xs-6">
                     <div class="row">
                         <div class="col-sm-4 col-xs-4">
-                            <strong>Website : </strong>
+                            <strong>Website: </strong>
                         </div>
                         <div class="col-sm-8 col-xs-8">
                             <!--<span><i><u>https://www.linkedin.com/in/sisylana</u></i></span>-->
@@ -121,7 +128,7 @@
                     </div><!-- end website row-->
                     <div class="row">
                         <div class="col-sm-4 col-xs-4">
-                            <strong>Address : </strong>
+                            <strong>Address: </strong>
                         </div>
                         <div class="col-sm-8 col-xs-8">
                             29, Goalghat,<br>
@@ -185,7 +192,7 @@
         </div><!-- end HSc row-->
     </div><!-- end Academic qualification row-->
 
-    <div class="row">
+    <div class="row" style="page-break-before: always;">
         <h1 class="heading">
             <strong>Skills</strong>
         </h1>
@@ -209,7 +216,7 @@
         </div>
     </div><!-- end Skills row -->
 
-    <div class="row">
+    <div class="row" style="page-break-before: always !important;">
         <h1 class="heading"><strong>Training Summary</strong></h1>
         <hr>
         <div class="col-sm-12">
@@ -283,7 +290,7 @@
         </div>
     </div><!-- end of programming competetion row-->
 
-    <div class="row">
+    <div class="row" style="page-break-before: always !important;">
         <div class="col-sm-12">
             <h1 class="heading"><strong>Projects</strong></h1>
             <hr>
@@ -363,7 +370,7 @@
     </div><!-- end projects row-->
 
 
-    <div class="row">
+    <div class="row" style="page-break-before: always !important;">
         <div class="col-sm-12">
             <h1 class="heading"><strong>Interests </strong></h1>
             <hr>
@@ -422,7 +429,12 @@
             </table>
         </div>
     </div><!-- end reference row-->
-
+    <div class="row button-row no-print">
+        <div class="col-xs-12">
+            <button class="btn btn-danger" id="print"><i class="fa fa-print"></i> Print</button>
+        </div>
+    </div><!-- end of button row-->
+    
     <div class="row footer row-content">
 
     </div><!-- end footer row-->
@@ -431,8 +443,33 @@
 
 
 <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.print/1.5.1/jQuery.print.min.js"></script>
+    <script>
+        $(function(){
+            
+            $('#print').click(function(e){
+               $("#wraper").print({
+                   globalStyles: true,
+                   mediaPrint: true,
+                   stylesheet: "print-bootstrap.css",
+                   noPrintSelector: ".no-print",
+                   iframe: true,
+                   append: null,
+                   prepend: null,
+                   manuallyCopyFormValues: true,
+                   deferred: $.Deferred(),
+                   timeout: 2000,
+                   title: null,
+                   doctype: '<!doctype html>',
+                   customScript:null
+               });
+            });
+
+        });
+    </script>
 </body>
 </html>
