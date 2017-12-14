@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My CV</title>
+    <title>Curriculum Vitae</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -81,8 +81,17 @@
             .row{
                 float: none !important;
             }
+            .heading {
+                width: 100% !important;
+                background: rgba(204, 204, 204, 0.3) !important;
+
+                padding: 3px !important;
+             }
         }
     
+        .description{
+            margin-left: 10px;
+        }
 
     </style>
 
@@ -119,11 +128,11 @@
                 <div class="col-sm-6 col-xs-6">
                     <div class="row">
                         <div class="col-sm-4 col-xs-4">
-                            <strong>Website: </strong>
+                            <strong>Linkedin: </strong>
                         </div>
                         <div class="col-sm-8 col-xs-8">
                             <!--<span><i><u>https://www.linkedin.com/in/sisylana</u></i></span>-->
-                            <i><a href="https://www.linkedin.com/in/sisylana">https://www.linkedin.com/in/sisylana</a></i>
+                            <i><span>https://www.linkedin.com/in/sisylana</span></i>
                         </div>
                     </div><!-- end website row-->
                     <div class="row">
@@ -142,17 +151,37 @@
 
     </div><!-- end first row-->
     <div class="row">
-        <h1 class="heading"><strong>Objective </strong></h1>
-        <hr>
-        <p>Want to develop a strong structural career in a renowned organization by applying my skills and passion and
-            showing my energy. I want to learn new things. I can work hard at the subject of my choice. I want to devote
-            my energy to develop the organization with respect to my position and develop my dignity.</p>
+        <div class="col-xs-12 col-md-12">
+            <h1 class="heading"><strong>Summary </strong></h1>
+            <p class="description">Engaged, creative computer science profissional for almost 9+ months of experience. Seeking to leverage exemplary leadership skills, analytical skills, and coding skills as a web programmer for your company.</p>      
+        </div> 
+    
     </div><!-- end objective row-->
 
     <div class="row">
-        <h1 class="heading"><strong>Academic Qualification </strong></h1>
-        <hr>
-        <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <h1 class="heading"><strong>Experiences </strong></h1>
+            <div class="description">
+                <strong>Software developer</strong>
+                <div><i>March 2017 - current</i></div>
+                <div><i>Ezze Technology Ltd. Kawran bazar, Dhaka-1215</i></div>
+                <br>
+                <ul>
+                    <li>Responsible for development of IT sector in the mid-sized IT firm.</li>
+                    <li>Made some web applications with help of PHP framework <b>Laravel, jQuery and Vuejs</b>.</li>
+                    <li>One of my applications is using the company for their <b>Human Resource Management</b>.</li>
+                    <li>Some other applications named <b>Smart appointment system, Role-based SMS provider panel</b></li> are using in Software Technology Park and Nanotechnology ltd respectively. 
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <h1 class="heading"><strong>Academic Qualification </strong></h1>
+        
+        <div class="row description">
             <div class="col-sm-8">
                 <h3><strong>B.Sc in Computer Science and Engineering.</strong><br><cite class="cite">Jagannath
                     University, Dhaka.</cite></h3>
@@ -165,7 +194,7 @@
                 <h3>February 2012 - February 2016</h3>
             </div>
         </div><!-- end BSC row-->
-        <div class="row">
+        <div class="row description">
             <div class="col-sm-8">
                 <h3><strong>Higher Secondary Certificate</strong><br><cite class="cite">Bangladesh Agricultural
                     University College, Mymenshingh.</cite></h3>
@@ -177,7 +206,7 @@
             </div>
         </div><!-- end HSc row-->
 
-        <div class="row">
+        <div class="row description">
             <div class="col-sm-8">
                 <h3><strong>Secondary School Certificate</strong><br><cite class="cite">Mohangonj Pilot Govt. High
                     School, Mohangonj, Netrakona.</cite></h3>
@@ -190,36 +219,44 @@
                 <h3>2004 - 2009</h3>
             </div>
         </div><!-- end HSc row-->
+        </div>
+        
     </div><!-- end Academic qualification row-->
 
-    <div class="row" style="page-break-before: always;">
-        <h1 class="heading">
-            <strong>Skills</strong>
-        </h1>
-        <hr>
-        <div class="col-sm-12">
 
-            <ul class="list-group">
-                <li class="list-group-item"><b>Programming Languages</b> - C, C++, JAVA</li>
-                <li class="list-group-item"><b>Web Programming Language</b> - HTML, CSS, JavaScript, PHP</li>
-                <li class="list-group-item"><b>Web Programming Framework(backend)</b> - Laravel</li>
-                <li class="list-group-item"><b>Web Programming Framework(frontend)</b> - AngularJS</li>
-                <li class="list-group-item"><b>Web Template(frontend)</b> - Bootstrap 3</li>
-                <li class="list-group-item"><b>JavaScript Library</b> - jQuery</li>
-                <li class="list-group-item"><b>DBMS</b> - MySQL, MySQLi</li>
-                <li class="list-group-item"><b>Operating System</b> - Ubuntu(Linux), Windows</li>
-                <li class="list-group-item"><b>Version Control</b> - Github</li>
-                <li class="list-group-item"><b>Gaming Platform</b> - Unity 3D with C#</li>
-                <li class="list-group-item"><b>Mobile platform</b> - Ionic Framework</li>
-            </ul>
+    
 
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <h1 class="heading">
+                <strong>Skills</strong>
+            </h1>
+            
+            <div class="col-sm-12">
+
+                <ul class="list-group">
+                    <li class="list-group-item"><b>Programming Languages</b> - C, C++, JAVA</li>
+                    <li class="list-group-item"><b>Web Programming Language</b> - HTML, CSS, JavaScript, PHP</li>
+                    <li class="list-group-item"><b>Web Programming Framework(backend)</b> - Laravel</li>
+                    <li class="list-group-item"><b>Web Programming Framework(frontend)</b> - VueJs</li>
+                    <li class="list-group-item"><b>Web Template(frontend)</b> - Bootstrap 3, Bootstrap 4</li>
+                    <li class="list-group-item"><b>JavaScript Library</b> - jQuery</li>
+                    <li class="list-group-item"><b>DBMS</b> - MySQL, MySQLi</li>
+                    <li class="list-group-item"><b>Operating System</b> - Ubuntu(Linux), Windows</li>
+                    <li class="list-group-item"><b>Version Control</b> - Github</li>
+                    <li class="list-group-item"><b>Gaming Platform</b> - Unity 3D with C#</li>
+                </ul>
+
+            </div>
         </div>
+        
     </div><!-- end Skills row -->
 
     <div class="row" style="page-break-before: always !important;">
-        <h1 class="heading"><strong>Training Summary</strong></h1>
-        <hr>
-        <div class="col-sm-12">
+        <div class="col-xs-12 col-md-12">
+            <h1 class="heading"><strong>Training Summary</strong></h1>
+        
+        <div class="col-sm-12 description">
             <table class="table table-responsive table-stripped table-bordered">
                 <tr>
                     <th>Training Title</th>
@@ -275,12 +312,14 @@
                 </tr>
             </table>
         </div>
+        </div>
+        
     </div><!--end trainig row-->
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12 col-md-12">
             <h1 class="heading"><strong>Programming Contests</strong></h1>
-            <hr>
-            <ul>
+           
+            <ul class="description">
                 <li>International Collegiate Programming Contest (ICPC), Dhaka regional 2016 at NSU</li>
                 <li>ACM-ICPC Bangladesh National Programming Contest 2013 at BUBT</li>
                 <li>Programming Contest on CSE Carnival 2013 at Jagannath University.</li>
@@ -291,10 +330,10 @@
     </div><!-- end of programming competetion row-->
 
     <div class="row" style="page-break-before: always !important;">
-        <div class="col-sm-12">
+        <div class="col-sm-12 col-md-12">
             <h1 class="heading"><strong>Projects</strong></h1>
-            <hr>
-            <div class="row">
+            
+            <div class="row description">
                 <div class="col-sm-12">
                     <h3><strong>Cricket Match Conduction and Performance Evaluation System</strong></h3>
                     <p>Cricket match conduction and performance evaluation system is web application by which
@@ -310,79 +349,109 @@
                 </div>
             </div><!-- end inserted first row-->
 
-            <div class="row">
+            <div class="row description">
                 <div class="col-sm-12">
-                    <h3><strong>Online Bookstore using PHP</strong></h3>
-                    <p>This is an online bookstore where one can search book by book name, author's name or edition. One
-                        can order a book or a set of book and books are delivered according to their cart. This website
-                        is basically built for students of Jagannath University, Dhaka.</p>
+                    <h3><strong>Human Resource Management System</strong></h3>
+                    <p>This is a Human Resource Management application by which one company can manage the whole HR system. The salary management, Loan management, Provident fund and all other systems.</p>
                     <strong>Tools: </strong>
-                    <small>HTML5, CSS3, Bootstrap framework, JQuery</small>
-                    <br><strong>Link: </strong>
-                    <small><a href="https://github.com/ahamed07sajeeb/bookstore" target="_blank">https://github.com/ahamed07sajeeb/bookstore</a>
+                    <small>HTML5, CSS3, Bootstrap 3, JQuery, ajax, Laravel 5.1 </small>
                     </small>
                 </div>
-            </div><!-- end first row-->
-            <div class="row">
-                <div class="col-sm-12">
-                    <h3><strong>Website for Mohangonj Pilot govt. High School using PHP</strong></h3>
-                    <p>This is a website for a secondary school with the information of overall school. The history,
-                        achievements, current students, former students, Sports, Events, etc. This website is used
-                        technologies </p>
-                    <strong>Tools: </strong>
-                    <small>HTML5, CSS3, Bootstrap framework, JQuery</small>
-                    <br><strong>Link: </strong>
-                    <small><a href="https://github.com/ahamed07sajeeb/MPGHS" target="_blank">https://github.com/ahamed07sajeeb/MPGHS</a>
-                    </small>
-                </div>
-            </div><!-- end 2nd row-->
+            </div><!-- end inserted first row-->
 
-            <div class="row">
+            <div class="row description">
                 <div class="col-sm-12">
-                    <h3><strong>A Single Page Application(SPA) using AngularJS</strong></h3>
-                    <p>This is a vary simple application made using AngularJS, A single page application(SPA) which is
-                        popular now a days.</p>
+                    <h3><strong>Smart Appointment Management System</strong></h3>
+                    <p>This is an appointment scheduling system by which an organization can track all of the appointments have been created. If a visitor wants to meet with any member works on the organization then by this system the visitor can create an appointment with him. The member gets notification of this appointment and can approve or reject the appointment.</p>
                     <strong>Tools: </strong>
-                    <small>HTML5, CSS3, Bootstrap, JQuery, AngularJS framework</small>
-                    <br><strong>Link: </strong>
-                    <small><a href="https://ahamed07sajeeb.github.io/app" target="_blank">https://ahamed07sajeeb.github.io/app</a>
+                    <small>HTML5, CSS3, Bootstrap 3, JQuery, ajax, Laravel 5.4 </small>
                     </small>
-
                 </div>
-            </div><!-- end 4th row-->
-            <div class="row">
+            </div><!-- end inserted first row-->
+
+            <div class="row description">
                 <div class="col-sm-12">
-                    <h3><strong>Study Assistant system using PHP OOP.</strong></h3>
-                    <p>By this website one student can create his account and he can upload important study materials
-                        like - pdf books, lectures etc. Even there has a question bank where one student can submit the
-                        questions which of course an image.</p>
+                    <h3><strong>Role based SMS provider system</strong></h3>
+                    <p>By this system one SMS provider company can send SMS to a single recipient or multiple recipients. The provider can create reseller or user accounts. The resellers also can create resellers and users and so on. One account holder can buy and sell SMS and also send SMS from Files.</p>
                     <strong>Tools: </strong>
-                    <small>HTML5, CSS3, Bootstrap 3, JQuery</small>
-                    <br><strong>Link: </strong>
-                    <small><a href="https://github.com/ahamed07sajeeb/project" target="_blank">https://github.com/ahamed07sajeeb/project</a>
+                    <small>HTML5, CSS3, Bootstrap 4, JQuery, ajax, VueJS Laravel 5.4 </small>
                     </small>
-
                 </div>
-            </div><!-- end 5th row-->
+            </div><!-- end inserted first row-->
+
+            
+
         </div>
 
 
     </div><!-- end projects row-->
 
-
     <div class="row" style="page-break-before: always !important;">
-        <div class="col-sm-12">
-            <h1 class="heading"><strong>Interests </strong></h1>
-            <hr>
-
-            <p><b>Playing</b> cricket, little bit of football, Dota-2</p>
-            <P><b>Drawing </b> Pencil scratch one of my favorite work.</P>
+        <div class="col-xs-12 col-md-12">
+            <h1 class="heading"><strong>Interests and Passions</strong></h1>
+            <div class="description">
+                
+                <br>
+                <ul>
+                    <li>You can find me at UVA or Codeforces.</li>
+                    <li>I passionate to do new things except repeating old.</li>
+                    <li>Love to play with code by which I can control electronics devices with help of microcontroller kits like Arduino.</li>
+                    <li>I like to play the computer games like <b>Dota 2</b> at leisure time.</li>
+                </ul>
+            </div>
         </div>
-    </div><!--end interest part-->
+    </div>
+
+    <!-- important links -->
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <h1 class="heading"><strong>Important Links</strong></h1>
+            <div class="description">
+                <div class="description">
+                    <span><span class="fa fa-github-square"> https://github.com/ahamed07sajeeb</span></span><br>
+                   <span><span class="fa fa-linkedin-square"> https://www.linkedin.com/in/sisylana</span></span>
+                   <br>
+                   <span><img src="http://www.google.com/s2/favicons?domain=uva.onlinejudge.org"> http://uhunt.onlinejudge.org/id/197269</span>
+                   <br>
+                   <span><img src="http://www.google.com/s2/favicons?domain=codeforces.com"> http://codeforces.com/profile/ahamed_sajeeb</span>     
+                </div>
+                              
+
+            </div>
+        </div>
+    </div>
+
 
     <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <h1 class="heading"><strong>References</strong></h1>
+            <div class="row description">
+                <div class="col-md-6 col-xs-6">
+                    <strong>Md Masbaul Alam Polash</strong>
+                    <p>Assistant professor</p>
+                    <p>Department of Computer Science and Engineering, Jagannath University, Dhaka-1100.</p>
+                    <span class="fa fa-envelope"> polash@cse.jnu.ac.bd</span>
+                    <br>
+                    <span><span class="fa fa-mobile fa-2x"></span> 01717703141</span>
+
+
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <strong>Sajeeb saha</strong>
+                    <p>Assistant professor</p>
+                    <p>Department of Computer Science and Engineering, Jagannath University, Dhaka-1100.</p>
+                    <span class="fa fa-envelope"> sajeebcsedu@gmail.com</span>
+                    <br>
+                    <span><span class="fa fa-mobile fa-2x"></span> 01914754181</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <!-- <div class="row">
         <h1 class="heading"><strong>References </strong></h1>
-        <hr>
+        
         <div class="col-sm-12">
             <table class="table table-responsive table-bordered">
                 <tr>
@@ -425,10 +494,10 @@
                     <td>Academic</td>
                     <td>Academic</td>
                 </tr>
-
+    
             </table>
         </div>
-    </div><!-- end reference row-->
+    </div>end reference row -->
     <div class="row button-row no-print">
         <div class="col-xs-12">
             <button class="btn btn-danger" id="print"><i class="fa fa-print"></i> Print</button>
